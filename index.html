@@ -3,59 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Smart Traffic Lights for Kampala</title>
+    <meta name="description" content="Revolutionary AI-powered traffic light system for Kampala, reducing congestion with Raspberry Pi and YOLOv5-nano.">
+    <meta name="keywords" content="Kampala traffic, smart traffic lights, AI, Raspberry Pi, YOLOv5, congestion solution">
+    <title>Smart Traffic Lights for Kampala</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation (same as index.html) -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Smart Traffic Lights</a>
+            <a class="navbar-brand" href="index.html">Smart Traffic Lights <span class="traffic-light-animation"></span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
                     <li class="nav-item"><a class="nav-link" href="results.html">Results</a></li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="code.html">Code</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="future.html">Future Applications</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Contact Section -->
+    <!-- Hero Carousel -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('img/kampala-traffic.jpg');">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Smart Traffic Lights for Kampala</h1>
+                    <p class="lead">Revolutionizing traffic flow with AI and Raspberry Pi</p>
+                    <a href="about.html" class="btn btn-success btn-lg">Discover the Innovation</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('img/leds.jpg');">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Real-Time Traffic Control</h1>
+                    <p class="lead">Dynamic light adjustments for Kampala’s busy streets</p>
+                    <a href="how-it-works.html" class="btn btn-success btn-lg">See How It Works</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Overview Section -->
     <section class="container my-5">
-        <h1>Contact Us</h1>
-        <p>Have questions or ideas for scaling this system to Kampala’s roads? Reach out to us!</p>
-        <form action="https://formspree.io/f/your-form-id" method="POST" class="row g-3">
-            <div class="col-md-6">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" name="name" required>
+        <h2>A Solution for Kampala’s Traffic Crisis</h2>
+        <p>In 2025, Kampala’s roads, such as Entebbe Road and Jinja Road, lose millions of hours annually to gridlock. Our Automated Traffic Light Management System, developed by Group 40, uses a Raspberry Pi 4 and YOLOv5-nano to detect vehicle density and optimize traffic light timings. Tested with toy cars, this prototype achieves 85% detection accuracy and is poised to transform intersections like Wandegeya and Clock Tower, saving time and reducing emissions.</p>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h4>85% Accuracy</h4>
+                <p>YOLOv5-nano detects toy cars with high precision.</p>
             </div>
-            <div class="col-md-6">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+            <div class="col-md-4">
+                <h4>Dynamic Control</h4>
+                <p>Adjusts green light times (5-20s) based on car counts.</p>
             </div>
-            <div class="col-12">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            <div class="col-md-4">
+                <h4>Scalable Design</h4>
+                <p>Ready for Kampala’s busiest intersections.</p>
             </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-success">Send Message</button>
-            </div>
-        </form>
-        <p class="mt-3">Alternatively, email us at <a href="mailto:group40.trafficproject@gmail.com">group40.trafficproject@gmail.com</a>.</p>
+        </div>
+        <div class="text-center mt-4">
+            <a href="https://github.com/Komukamatracy/AUTOMATED-TRAFFIC-LIGHT-MANAGEMENT-SYSTEM-PROJECT" class="btn btn-primary">Explore the Code</a>
+        </div>
     </section>
 
-    <!-- Footer (same as index.html) -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 Group 40. All rights reserved. | <a href="contact.html" class="text-white">Contact Us</a></p>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2025 Group 40 – Kato Agaba Arnold, Komukama Tracy, Madete Hector, Nabaggala Marion. A class project for smarter cities.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
