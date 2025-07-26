@@ -1,0 +1,63 @@
+/* Custom styles for the website */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero {
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay for readability */
+    padding: 100px 0;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.btn-success {
+    background-color: #28a745; /* Traffic light green */
+}
+
+.btn-primary {
+    background-color: #dc3545; /* Traffic light red */
+    border-color: #dc3545;
+}
+
+.btn-primary:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+section {
+    padding: 60px 0;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+pre code {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    display: block;
+}
+
+/* Animation for traffic light effect */
+@keyframes trafficLight {
+    0% { background-color: #dc3545; } /* Red */
+    33% { background-color: #ffc107; } /* Yellow */
+    66% { background-color: #28a745; } /* Green */
+    100% { background-color: #dc3545; } /* Red */
+}
+
+.traffic-light-animation {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    animation: trafficLight 6s infinite;
+}
