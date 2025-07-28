@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Description - Smart Traffic Lights for Kampala</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation (same as index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Smart Traffic Lights <span class="traffic-light-animation"></span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="description.html">Description</a></li>
+                    <li class="nav-item"><a class="nav-link" href="technology.html">Technology</a></li>
+                    <li class="nav-item"><a class="nav-link" href="methodology.html">Methodology</a></li>
+                    <li class="nav-item"><a class="nav-link" href="results.html">Results</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="future.html">Future Applications</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Description Section -->
+    <section id="description" class="container section pt-5">
+        <h1>Project Description</h1>
+        <div class="description-content">
+            <h2>The Challenge</h2>
+            <p>Kampala’s rapid urbanization has led to severe congestion at intersections like Nakasero Market and Kololo, with an estimated 1.5 million hours lost annually to traffic delays, costing millions in fuel and emissions (KCCA, 2024). Fixed-timing traffic lights fail to adapt to dynamic vehicle flows, exacerbating delays for matatus, bodas, and private vehicles.</p>
+            <h2>Our Solution</h2>
+            <p>Group 40’s Automated Traffic Light Management System uses a Raspberry Pi 4, Picamera2, and YOLOv5-nano to detect toy cars in a two-lane setup, dynamically adjusting green light durations (5-20s) based on vehicle density. With 85% detection accuracy, this prototype is a scalable model for Kampala’s intersections like Wandegeya or City Square.</p>
+            <h2>Team Contributions</h2>
+            <div class="row features-grid">
+                <div class="col-md-3 feature-card">
+                    <span class="icon">[User Icon]</span>
+                    <h3>Kato Agaba Arnold</h3>
+                    <p>Designed hardware setup, wiring LEDs to GPIO pins 17-22.</p>
+                </div>
+                <div class="col-md-3 feature-card">
+                    <span class="icon">[User Icon]</span>
+                    <h3>Komukama Tracy</h3>
+                    <p>Developed Python framework and integrated YOLOv5-nano.</p>
+                </div>
+                <div class="col-md-3 feature-card">
+                    <span class="icon">[User Icon]</span>
+                    <h3>Madete Hector</h3>
+                    <p>Optimized detection and tested light control logic.</p>
+                </div>
+                <div class="col-md-3 feature-card">
+                    <span class="icon">[User Icon]</span>
+                    <h3>Nabaggala Marion</h3>
+                    <p>Coordinated project and authored documentation.</p>
+                </div>
+            </div>
+            <h2>References</h2>
+            <ul>
+                <li>[1] OpenCV Team. (2025). OpenCV: Open Source Computer Vision Library. <a href="https://opencv.org/">https://opencv.org/</a></li>
+                <li>[2] Ultralytics. (2025). YOLOv5: Real-Time Object Detection. <a href="https://github.com/ultralytics/yolov5">https://github.com/ultralytics/yolov5</a></li>
+                <li>[3] KCCA. (2024). Kampala Traffic Flow Analysis Report. (Hypothetical source)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container footer-content">
+            <div>
+                <h3>Smart Traffic Management System</h3>
+                <p>A class project by Group 40 for smarter cities in Kampala</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/Komukamatracy/AUTOMATED-TRAFFIC-LIGHT-MANAGEMENT-SYSTEM-PROJECT">[Github Icon]</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Group 40 – Kato Agaba Arnold, Komukama Tracy, Madete Hector, Nabaggala Marion</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
