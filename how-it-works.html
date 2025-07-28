@@ -8,7 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/works.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/style.css">
+    
     <style>
  
     </style>
@@ -43,23 +43,32 @@
             </ul>
         </div>
     </nav> -->
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+     <nav class="navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Smart Traffic Lights</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
-                    <li class="nav-item"><a class="nav-link" href="results.html">Results</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="code.html">Code</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
+            <div class="nav-brand">
+                <a href="index.html">
+                    Automated Traffic Lights
+                    <div class="traffic-lights">
+                        <div class="light red"></div>
+                        <div class="light yellow"></div>
+                        <div class="light green active"></div>
+                    </div>
+                </a>
             </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+                <li><a href="results.html" class="nav-link">Results</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="code.html" class="nav-link">Code</a></li>
+                <li><a href="future.html" class="nav-link">Future Applications</a></li>
+            </ul>
         </div>
     </nav>
 
