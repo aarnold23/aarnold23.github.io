@@ -5,57 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code - Smart Traffic Lights for Kampala</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Navigation (same as index.html) -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Smart Traffic Lights</a>
+            <a class="navbar-brand" href="index.html">Smart Traffic Lights <span class="traffic-light-animation"></span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="description.html">Description</a></li>
+                    <li class="nav-item"><a class="nav-link" href="technology.html">Technology</a></li>
+                    <li class="nav-item"><a class="nav-link" href="methodology.html">Methodology</a></li>
                     <li class="nav-item"><a class="nav-link" href="results.html">Results</a></li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link active" href="code.html">Code</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="future.html">Future Applications</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Code Section -->
-    <section class="container my-5">
+    <section id="code" class="container section pt-5">
         <h1>Code and Repository</h1>
-        <p>Our project’s source code is available on GitHub. Explore the Python scripts, YOLOv5-nano integration, and LED control logic.</p>
+        <p>Explore our open-source implementation on GitHub, powering Kampala’s smart traffic solution.</p>
         <a href="https://github.com/Komukamatracy/AUTOMATED-TRAFFIC-LIGHT-MANAGEMENT-SYSTEM-PROJECT" class="btn btn-primary mb-3">Visit GitHub Repository</a>
-        
         <h2>Key Files</h2>
         <ul>
-            <li><strong>main.py</strong>: Handles YOLOv5 detection and LED control.</li>
-            <li><strong>log.csv</strong>: Stores car counts and light states for analysis.</li>
+            <li><strong>main.py</strong>: Orchestrates YOLOv5 detection, LED control, and logging.</li>
+            <li><strong>log.csv</strong>: Stores data, e.g., <code>2025-07-18 10:00, Lane A: 3 cars, Lane B: 5 cars, Lane A Green: 10s</code>.</li>
+            <li><strong>config.yaml</strong>: YOLOv5-nano configuration with 0.3 confidence threshold.</li>
         </ul>
-        
-        <h2>Sample Code</h2>
+        <h2>Sample Code: LED Control</h2>
         <pre><code class="language-python">
 import RPi.GPIO as GPIO
+import time
+
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(17, GPIO.OUT)  # Red LED for Lane A
-GPIO.output(17, GPIO.HIGH)  # Turn on red light
+GPIO.setup(17, GPIO.OUT)  # Red LED Lane A
+GPIO.setup(18, GPIO.OUT)  # Green LED Lane A
+
+def set_traffic_light(lane, state, duration):
+    if lane == 'A' and state == 'green':
+        GPIO.output(17, GPIO.LOW)
+        GPIO.output(18, GPIO.HIGH)
+        time.sleep(duration)
         </code></pre>
-        
-        <h2>Running the Code</h2>
-        <p>Clone the repository to a Raspberry Pi 4, install dependencies (OpenCV, YOLOv5, RPi.GPIO), and run <code>main.py</code> with a connected Picamera2 and LEDs.</p>
+        <h2>Sample Code: YOLOv5 Detection</h2>
+        <pre><code class="language-python">
+import cv2
+from yolov5 import YOLOv5
+
+model = YOLOv5('yolov5n.pt', device='cpu')
+cap = cv2.VideoCapture(0)
+
+while True:
+    ret, frame = cap.read()
+    results = model.predict(frame, conf_thres=0.3)
+    car_count = len(results.xyxy[0])
+    print(f"Cars detected: {car_count}")
+        </code></pre>
+        <h2>Setup Instructions</h2>
+        <ol>
+            <li>Clone: <code>git clone https://github.com/Komukamatracy/AUTOMATED-TRAFFIC-LIGHT-MANAGEMENT-SYSTEM-PROJECT</code></li>
+            <li>Install: <code>pip install opencv-python torch yolov5 RPi.GPIO</code></li>
+            <li>Connect Picamera2 and LEDs (GPIO 17-22).</li>
+            <li>Run <code>main.py</code>.</li>
+        </ol>
     </section>
 
     <!-- Footer (same as index.html) -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 Group 40. All rights reserved. | <a href="contact.html" class="text-white">Contact Us</a></p>
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container footer-content">
+            <div>
+                <h3>Smart Traffic Management System</h3>
+                <p>A class project by Group 40 for smarter cities in Kampala</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/Komukamatracy/AUTOMATED-TRAFFIC-LIGHT-MANAGEMENT-SYSTEM-PROJECT">[Github Icon]</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Group 40 – Kato Agaba Arnold, Komukama Tracy, Madete Hector, Nabaggala Marion</p>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
