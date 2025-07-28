@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Revolutionary AI-powered traffic light system for Kampala, reducing congestion with Raspberry Pi and YOLOv5-nano.">
-    <meta name="keywords" content="Kampala traffic, smart traffic lights, AI, Raspberry Pi, YOLOv5, congestion solution">
+    <meta name="description" content="AI-powered traffic light system for Kampala, reducing congestion with Raspberry Pi and YOLOv5-nano.">
+    <meta name="keywords" content="Kampala traffic, smart traffic lights, AI, Raspberry Pi, YOLOv5">
     <title>Smart Traffic Lights for Kampala</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -21,11 +21,11 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="description.html">Description</a></li>
+                    <li class="nav-item"><a class="nav-link" href="technology.html">Technology</a></li>
+                    <li class="nav-item"><a class="nav-link" href="methodology.html">Methodology</a></li>
                     <li class="nav-item"><a class="nav-link" href="results.html">Results</a></li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="code.html">Code</a></li>
                     <li class="nav-item"><a class="nav-link" href="future.html">Future Applications</a></li>
                 </ul>
             </div>
@@ -33,59 +33,88 @@
     </nav>
 
     <!-- Hero Carousel -->
-    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active" style="background-image: url('img/kampala-traffic.jpg');">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1>Smart Traffic Lights for Kampala</h1>
-                    <p class="lead">Revolutionizing traffic flow with AI and Raspberry Pi</p>
-                    <a href="about.html" class="btn btn-success btn-lg">Discover the Innovation</a>
+    <section id="overview" class="hero">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: linear-gradient(to right, rgba(40, 167, 69, 0.8), rgba(220, 53, 69, 0.8)), url('img/kampala-traffic.jpg');">
+                    <div class="container hero-container">
+                        <div class="hero-text">
+                            <h2>Automated Traffic Light Management System</h2>
+                            <p class="lead">Tackling Kampala’s congestion with AI-powered traffic control</p>
+                            <div class="hero-buttons">
+                                <a href="description.html" class="btn btn-success">Learn More</a>
+                                <a href="gallery.html" class="btn btn-primary">View Demo</a>
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <img src="img/leds.jpg" alt="Traffic light prototype" class="img-fluid rounded shadow">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: linear-gradient(to right, rgba(40, 167, 69, 0.8), rgba(220, 53, 69, 0.8)), url('img/kampala-map.png');">
+                    <div class="container hero-container">
+                        <div class="hero-text">
+                            <h2>Smart Solutions for Kampala</h2>
+                            <p class="lead">Optimizing intersections like Wandegeya and Clock Tower</p>
+                            <div class="hero-buttons">
+                                <a href="methodology.html" class="btn btn-success">See How It Works</a>
+                                <a href="results.html" class="btn btn-primary">View Results</a>
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <img src="img/system-diagram.png" alt="System architecture" class="img-fluid rounded shadow">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="carousel-item" style="background-image: url('img/leds.jpg');">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1>Real-Time Traffic Control</h1>
-                    <p class="lead">Dynamic light adjustments for Kampala’s busy streets</p>
-                    <a href="how-it-works.html" class="btn btn-success btn-lg">See How It Works</a>
-                </div>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+    </section>
 
     <!-- Overview Section -->
-    <section class="container my-5">
-        <h2>A Solution for Kampala’s Traffic Crisis</h2>
-        <p>In 2025, Kampala’s roads, such as Entebbe Road and Jinja Road, lose millions of hours annually to gridlock. Our Automated Traffic Light Management System, developed by Group 40, uses a Raspberry Pi 4 and YOLOv5-nano to detect vehicle density and optimize traffic light timings. Tested with toy cars, this prototype achieves 85% detection accuracy and is poised to transform intersections like Wandegeya and Clock Tower, saving time and reducing emissions.</p>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <h4>85% Accuracy</h4>
-                <p>YOLOv5-nano detects toy cars with high precision.</p>
+    <section class="container section">
+        <h2>Solving Kampala’s Traffic Crisis</h2>
+        <p>In 2025, Kampala’s roads, like Jinja Road and Entebbe Road, lose an estimated 1.5 million hours annually to gridlock, costing millions in fuel and emissions (KCCA, 2024). Our system, developed by Group 40, uses Raspberry Pi 4 and YOLOv5-nano to detect vehicle density and adjust traffic light timings dynamically, achieving 85% detection accuracy in a toy car prototype. This innovation could transform intersections like City Square, saving time and reducing CO2 emissions.</p>
+        <div class="row text-center mt-4">
+            <div class="col-md-4 feature-card">
+                <span class="icon">[Car Icon]</span>
+                <h3>85% Accuracy</h3>
+                <p>Precise detection of toy cars, scalable for matatus and bodas.</p>
             </div>
-            <div class="col-md-4">
-                <h4>Dynamic Control</h4>
-                <p>Adjusts green light times (5-20s) based on car counts.</p>
+            <div class="col-md-4 feature-card">
+                <span class="icon">[Clock Icon]</span>
+                <h3>Dynamic Timing</h3>
+                <p>Green light durations adapt to traffic density (5-20s).</p>
             </div>
-            <div class="col-md-4">
-                <h4>Scalable Design</h4>
-                <p>Ready for Kampala’s busiest intersections.</p>
+            <div class="col-md-4 feature-card">
+                <span class="icon">[Globe Icon]</span>
+                <h3>Kampala Impact</h3>
+                <p>Potential to save 500,000 liters of fuel annually.</p>
             </div>
-        </div>
-        <div class="text-center mt-4">
-            <a href="https://github.com/Komukamatracy/AUTOMATED-TRAFFIC-LIGHT-MANAGEMENT-SYSTEM-PROJECT" class="btn btn-primary">Explore the Code</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4">
-        <p>&copy; 2025 Group 40 – Kato Agaba Arnold, Komukama Tracy, Madete Hector, Nabaggala Marion. A class project for smarter cities.</p>
+        <div class="container footer-content">
+            <div>
+                <h3>Smart Traffic Management System</h3>
+                <p>A class project by Group 40 for smarter cities in Kampala</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/Komukamatracy/AUTOMATED-TRAFFIC-LIGHT-MANAGEMENT-SYSTEM-PROJECT">[Github Icon]</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Group 40 – Kato Agaba Arnold, Komukama Tracy, Madete Hector, Nabaggala Marion</p>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
