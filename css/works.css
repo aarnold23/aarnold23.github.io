@@ -1,5 +1,5 @@
        /* Modern Card Styles */
-        :root {
+/*         :root {
             --primary-color: #6366f1;
             --success-color: #10b981;
             --warning-color: #f59e0b;
@@ -93,7 +93,7 @@
             text-align: left;
         }
 
-        /* System Components Styles */
+        /* System Components Styles 
         .info-section {
             margin-bottom: 1.5rem;
             padding: 1rem;
@@ -120,7 +120,7 @@
             line-height: 1.5;
         }
 
-        /* Workflow Styles */
+        /* Workflow Styles 
         .workflow-steps {
             display: flex;
             flex-direction: column;
@@ -167,7 +167,7 @@
             font-size: 0.85rem;
         }
 
-        /* Application Card Styles */
+        /* Application Card Styles 
         .location-badge {
             background: linear-gradient(135deg, var(--warning-color), #fbbf24);
             color: white;
@@ -227,7 +227,121 @@
             height: 4px;
             background: linear-gradient(90deg, var(--primary-color), var(--success-color));
             border-radius: 2px;
-        }
+        } */
+:root {
+    --primary: #0070f3;
+    --primary-foreground: #ffffff;
+    --secondary: #f5f5f5;
+    --secondary-foreground: #111;
+    --accent: #00a8ff;
+    --accent-foreground: #ffffff;
+    --background: #ffffff;
+    --foreground: #111111;
+    --card: #ffffff;
+    --card-foreground: #111111;
+    --border: #e5e5e5;
+    --input: #ffffff;
+    --ring: #0070f3;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+.process-flow {
+    padding: 2rem 0;
+}
+
+.process-card {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-5px);
+}
+
+.card {
+    border: 2px solid var(--border);
+    border-radius: 15px;
+    background: var(--card);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-title {
+    color: var(--card-foreground);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: var(--muted-foreground);
+}
+
+.arrow {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary);
+    z-index: 1;
+}
+
+.arrow:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -4px;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid var(--primary);
+    border-right: 2px solid var(--primary);
+    transform: rotate(45deg);
+}
+
+@media (max-width: 991.98px) {
+    .arrow {
+        display: none;
+    }
+    
+    .process-card {
+        margin-bottom: 2rem;
+    }
+}
+
+.process-card:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--ring);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .process-card {
+        transition: none;
+    }
+}
+
 
         .video-container {
             background: white;
