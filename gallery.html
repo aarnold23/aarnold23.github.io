@@ -5,86 +5,263 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Smart Traffic Lights for Kampala</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/gallery.css">
+    <style>
+        
+    </style>
 </head>
 <body>
-    <!-- Navigation (same as index.html) -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Smart Traffic Lights <span class="traffic-light-animation"></span></a>
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-traffic-light me-2"></i>Smart Traffic Lights
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="description.html">Description</a></li>
-                    <li class="nav-item"><a class="nav-link" href="technology.html">Technology</a></li>
-                    <li class="nav-item"><a class="nav-link" href="methodology.html">Methodology</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
                     <li class="nav-item"><a class="nav-link" href="results.html">Results</a></li>
                     <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="future.html">Future Applications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="code.html">Code</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="container section pt-5">
-        <h1>Project Gallery</h1>
-        <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/leds.jpg" class="d-block w-100 rounded shadow" alt="LED traffic lights in action">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>LED Traffic Lights</h5>
-                        <p>Simulating two-lane control for Kampala intersections.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/yolo-output.png" class="d-block w-100 rounded shadow" alt="YOLOv5 toy car detection">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>YOLOv5 Detection</h5>
-                        <p>85% accurate detection, scalable for matatus.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/kampala-traffic.jpg" class="d-block w-100 rounded shadow" alt="Kampala traffic">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Kampala’s Roads</h5>
-                        <p>Vision for deployment at Clock Tower junction.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="hero-title">Project Gallery</h1>
+            <p class="hero-subtitle">Visual documentation of our Smart Traffic Management System</p>
         </div>
     </section>
 
-    <!-- Footer (same as index.html) -->
+    <!-- Gallery Section -->
+    <section class="container my-5">
+        <!-- Category Tabs -->
+        <div class="category-tabs text-center">
+            <button class="category-btn active" data-category="all">
+                <i class="fas fa-th me-2"></i>All Images
+            </button>
+            <button class="category-btn" data-category="hardware">
+                <i class="fas fa-microchip me-2"></i>Hardware
+            </button>
+            <button class="category-btn" data-category="software">
+                <i class="fas fa-code me-2"></i>Software
+            </button>
+            <button class="category-btn" data-category="kampala">
+                <i class="fas fa-city me-2"></i>Kampala Context
+            </button>
+        </div>
+
+        <div class="row g-4">
+            <!-- Hardware Images -->
+            <div class="col-lg-4 col-md-6" data-category="hardware">
+                <div class="gallery-card">
+                    <div class="image-placeholder">
+                        <i class="fas fa-led"></i>
+                        <h5>LED Traffic Lights</h5>
+                        <p class="mb-0">Image placeholder</p>
+                    </div>
+                    <div class="gallery-content">
+                        <h5 class="gallery-title">
+                            <i class="fas fa-lightbulb me-2 text-warning"></i>
+                            LED Traffic Light Setup
+                        </h5>
+                        <p class="gallery-description">
+                            Six LEDs configured on breadboard representing two-lane traffic control system with red, yellow, and green lights for each direction.
+                        </p>
+                        <span class="gallery-badge">Hardware</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-category="hardware">
+                <div class="gallery-card">
+                    <div class="image-placeholder">
+                        <i class="fas fa-microchip"></i>
+                        <h5>Raspberry Pi Setup</h5>
+                        <p class="mb-0">Image placeholder</p>
+                    </div>
+                    <div class="gallery-content">
+                        <h5 class="gallery-title">
+                            <i class="fas fa-microchip me-2 text-success"></i>
+                            Raspberry Pi 4 Configuration
+                        </h5>
+                        <p class="gallery-description">
+                            Complete hardware setup showing Raspberry Pi 4 connected to Picamera2 module and LED array via GPIO pins for traffic control.
+                        </p>
+                        <span class="gallery-badge">Hardware</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Software Images -->
+            <div class="col-lg-4 col-md-6" data-category="software">
+                <div class="gallery-card">
+                    <div class="image-placeholder">
+                        <i class="fas fa-eye"></i>
+                        <h5>YOLO Detection</h5>
+                        <p class="mb-0">Image placeholder</p>
+                    </div>
+                    <div class="gallery-content">
+                        <h5 class="gallery-title">
+                            <i class="fas fa-robot me-2 text-primary"></i>
+                            YOLOv5 Vehicle Detection
+                        </h5>
+                        <p class="gallery-description">
+                            Real-time object detection output showing YOLOv5-nano successfully identifying and counting toy cars with 85% accuracy rate.
+                        </p>
+                        <span class="gallery-badge">AI Detection</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-category="software">
+                <div class="gallery-card">
+                    <div class="image-placeholder">
+                        <i class="fas fa-chart-line"></i>
+                        <h5>Data Analytics</h5>
+                        <p class="mb-0">Image placeholder</p>
+                    </div>
+                    <div class="gallery-content">
+                        <h5 class="gallery-title">
+                            <i class="fas fa-chart-bar me-2 text-info"></i>
+                            Traffic Data Visualization
+                        </h5>
+                        <p class="gallery-description">
+                            CSV data logs and analytics dashboard showing vehicle count patterns, timing adjustments, and system performance metrics.
+                        </p>
+                        <span class="gallery-badge">Analytics</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kampala Context Images -->
+            <div class="col-lg-4 col-md-6" data-category="kampala">
+                <div class="gallery-card">
+                    <div class="image-placeholder">
+                        <i class="fas fa-road"></i>
+                        <h5>Kampala Traffic</h5>
+                        <p class="mb-0">Image placeholder</p>
+                    </div>
+                    <div class="gallery-content">
+                        <h5 class="gallery-title">
+                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>
+                            Wandegeya Junction
+                        </h5>
+                        <p class="gallery-description">
+                            Busy intersection at Wandegeya showing typical Kampala traffic with matatus, bodas, and private vehicles - ideal deployment location.
+                        </p>
+                        <span class="gallery-badge">Kampala Context</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-category="kampala">
+                <div class="gallery-card">
+                    <div class="image-placeholder">
+                        <i class="fas fa-city"></i>
+                        <h5>City Square</h5>
+                        <p class="mb-0">Image placeholder</p>
+                    </div>
+                    <div class="gallery-content">
+                        <h5 class="gallery-title">
+                            <i class="fas fa-building me-2 text-warning"></i>
+                            City Square Intersection
+                        </h5>
+                        <p class="gallery-description">
+                            Major Kampala intersection where our smart traffic system could significantly reduce congestion and improve traffic flow efficiency.
+                        </p>
+                        <span class="gallery-badge">Deployment Site</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Specifications -->
+        <div class="section-header mt-5">
+            <h2><i class="fas fa-cogs me-2"></i>Technical Specifications</h2>
+            <p class="mb-0">Detailed overview of our system components and capabilities</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="gallery-card">
+                    <div class="gallery-content">
+                        <h5 class="gallery-title">
+                            <i class="fas fa-server me-2 text-primary"></i>
+                            Hardware Specifications
+                        </h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Raspberry Pi 4 Model B</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Picamera2 Module v2.1</li>
+                            <li><i class="fas fa-check text-success me-2"></i>6x LEDs (Red, Yellow, Green)</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Breadboard & GPIO Connections</li>
+                            <li><i class="fas fa-check text-success me-2"></i>32GB MicroSD Card</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="gallery-card">
+                    <div class="gallery-content">
+                        <h5 class="gallery-title">
+                            <i class="fas fa-code me-2 text-success"></i>
+                            Software Stack
+                        </h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Python 3.9+</li>
+                            <li><i class="fas fa-check text-success me-2"></i>OpenCV 4.5+</li>
+                            <li><i class="fas fa-check text-success me-2"></i>YOLOv5-nano Model</li>
+                            <li><i class="fas fa-check text-success me-2"></i>RPi.GPIO Library</li>
+                            <li><i class="fas fa-check text-success me-2"></i>CSV Data Logging</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4">
-        <div class="container footer-content">
-            <div>
-                <h3>Smart Traffic Management System</h3>
-                <p>A class project by Group 40 for smarter cities in Kampala</p>
-            </div>
-            <div class="footer-links">
-                <a href="https://github.com/Komukamatracy/AUTOMATED-TRAFFIC-LIGHT-MANAGEMENT-SYSTEM-PROJECT">[Github Icon]</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Group 40 – Kato Agaba Arnold, Komukama Tracy, Madete Hector, Nabaggala Marion</p>
-        </div>
+        <p>&copy; 2025 Group 40. All rights reserved. | <a href="contact.html" class="text-white">Contact Us</a></p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script>
+        // Category filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const galleryItems = document.querySelectorAll('[data-category]');
+
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    
+                    // Update active button
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter gallery items
+                    galleryItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                            item.style.animation = 'fadeInUp 0.6s ease forwards';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
