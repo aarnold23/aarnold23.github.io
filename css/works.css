@@ -109,7 +109,6 @@
         .section-title {
             font-weight: 600;
             color: #374151;
-            padding-top:90px;
             margin-bottom: 0.5rem;
             font-size: 0.95rem;
         }
@@ -213,6 +212,7 @@
             font-size: 2.5rem;
             font-weight: 700;
             color: #1e293b;
+            padding-top:90px;   
             margin-bottom: 3rem;
             position: relative;
         }
