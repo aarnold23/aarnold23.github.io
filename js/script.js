@@ -1,8 +1,18 @@
-// Simple animation for traffic light effect
+// JavaScript for navbar toggle and smooth scrolling
 document.addEventListener('DOMContentLoaded', () => {
-    // Add traffic light animation to navbar brand (optional)
+    // Traffic light animation in navbar
     const navbarBrand = document.querySelector('.navbar-brand');
     const light = document.createElement('span');
-    light.className = 'traffic-light-animation ms-2';
+    light.className = 'traffic-light-animation';
     navbarBrand.appendChild(light);
+
+    // Smooth scroll for in-page links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 });
