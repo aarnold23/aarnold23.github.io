@@ -261,6 +261,19 @@ body {
 .process-card:hover {
     transform: translateY(-5px);
 }
+  .section-title {
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+ .section-content {
+            color: #6b7280;
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+ }
 
 .card {
     border: 2px solid var(--border);
