@@ -113,34 +113,57 @@
                         </div>
                         <div class="card-content">
                             <div class="workflow-steps">
-                                <div class="workflow-step">
+<!--                                 <div class="workflow-step">
                                     <div class="step-icon">📷</div>
                                     <div class="step-content">
                                         <h6>Video Capture</h6>
                                         <p>Real-time video captured using Picamera2</p>
                                     </div>
-                                </div>
-                                <div class="workflow-step">
+                                </div> -->
+<!--                                 <div class="workflow-step">
                                     <div class="step-icon">🧠</div>
                                     <div class="step-content">
                                         <h6>AI Detection</h6>
                                         <p>YOLOv5-nano detects & counts vehicles</p>
                                     </div>
-                                </div>
-                                <div class="workflow-step">
+                                </div> -->
+<!--                                 <div class="workflow-step">
                                     <div class="step-icon">⏱️</div>
                                     <div class="step-content">
                                         <h6>Smart Timing</h6>
                                         <p>Light timing adjusts based on car count</p>
                                     </div>
-                                </div>
-                                <div class="workflow-step">
+                                </div> -->
+<!--                                 <div class="workflow-step">
                                     <div class="step-icon">🗃️</div>
                                     <div class="step-content">
                                         <h6>Data Logging</h6>
                                         <p>Traffic data logged for analysis</p>
                                     </div>
-                                </div>
+                                </div> -->
+                                    <div class="text-center my-4">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#techModal">View Technical Details</button>
+        </div>
+        
+        <!-- Modal for Technical Details -->
+        <div class="modal fade" id="techModal" tabindex="-1" aria-labelledby="techModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="techModalLabel">Technical Specifications</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>YOLOv5-nano</strong>: Lightweight model with 1.9M parameters, optimized for Raspberry Pi.</p>
+                        <p><strong>Camera Latency</strong>: 1-2s due to processing, mitigated by reducing frame resolution to 640x480.</p>
+                        <p><strong>GPIO Configuration</strong>: Pins 17-22 control LEDs, with resistors to prevent damage.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
                             </div>
                         </div>
                     </div>
