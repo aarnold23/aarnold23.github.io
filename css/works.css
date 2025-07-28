@@ -274,6 +274,26 @@ body {
             font-size: 0.9rem;
             line-height: 1.5;
  }
+.section-title.text-center {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            padding-top:90px;   
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title.text-center::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--success-color));
+            border-radius: 2px;
+        } 
 
 .card {
     border: 2px solid var(--border);
