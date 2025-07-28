@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Smart Traffic Lights for Kampala</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+    <style>
+       
+    </style>
 </head>
 <body>
-    <!-- Navigation (same as index.html) -->
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">Smart Traffic Lights <span class="traffic-light-animation"></span></a>
@@ -30,64 +34,168 @@
         </div>
     </nav>
 
-    <!-- About Section -->
-    <section class="container my-5 pt-5">
-        <h1>About the Project</h1>
-        <h2>Kampala’s Traffic Challenge</h2>
-        <p>Kampala’s rapid urbanization has overwhelmed its road network, with intersections like Nakasero Market and Kololo losing an estimated 1.5 million hours annually to congestion, costing millions in fuel and emissions (KCCA, 2024). Traditional traffic lights lack adaptability, exacerbating delays for matatus, bodas, and private vehicles.</p>
-        
-        <h2>Our Innovative Solution</h2>
-        <p>Developed by Group 40, our Automated Traffic Light Management System leverages a Raspberry Pi 4, Picamera2, and YOLOv5-nano to detect toy cars and dynamically adjust traffic light timings (5-20s based on vehicle density). This prototype, achieving 85% detection accuracy, is a scalable model for optimizing Kampala’s intersections like Wandegeya or City Square.</p>
-        
-        <h2>Meet the Team</h2>
-        <div class="row">
-            <div class="col-md-3 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Kato Agaba Arnold</h5>
-                        <p class="card-text">Designed and wired the Raspberry Pi 4 with LEDs, ensuring safe GPIO operation for traffic light control.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Komukama Tracy</h5>
-                        <p class="card-text">Led software development, integrating YOLOv5-nano with OpenCV and managing the GitHub repository.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Madete Hector</h5>
-                        <p class="card-text">Optimized detection accuracy to 85% and tested dynamic light control logic.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Nabaggala Marion</h5>
-                        <p class="card-text">Coordinated the project and authored comprehensive documentation, including this website.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <h2>References</h2>
-        <ul>
-            <li>[1] OpenCV Team. (2025). OpenCV: Open Source Computer Vision Library. <a href="https://opencv.org/">https://opencv.org/</a></li>
-            <li>[2] Ultralytics. (2025). YOLOv5: Real-Time Object Detection. <a href="https://github.com/ultralytics/yolov5">https://github.com/ultralytics/yolov5</a></li>
-            <li>[3] KCCA. (2024). Kampala Traffic Flow Analysis Report. (Hypothetical source for context)</li>
-        </ul>
-        
-        <div class="text-center my-4">
-            <img src="img/kampala-map.png" alt="Map of Kampala’s congested intersections" class="img-fluid rounded shadow" style="max-width: 600px;">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="hero-title">About the Project</h1>
+            <p class="hero-subtitle">Revolutionizing Kampala's Traffic Management with AI-Powered Solutions</p>
         </div>
     </section>
 
-    <!-- Footer (same as index.html) -->
+    <!-- About Section -->
+    <section class="container my-5">
+        <!-- Challenge Section -->
+        <div class="section-header">
+            <h2><i class="fas fa-exclamation-triangle me-2"></i>Kampala's Traffic Challenge</h2>
+        </div>
+        
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="modern-card challenge-card">
+                    <div class="d-flex align-items-start">
+                        <div class="me-3">
+                            <i class="fas fa-traffic-light" style="font-size: 3rem; opacity: 0.8;"></i>
+                        </div>
+                        <div>
+                            <h4 class="mb-3">The Urban Crisis</h4>
+                            <p class="mb-0">
+                                Kampala's rapid urbanization has overwhelmed its road network, with intersections like Nakasero Market and Kololo losing an estimated 1.5 million hours annually to congestion, costing millions in fuel and emissions (KCCA, 2024). Traditional traffic lights lack adaptability, exacerbating delays for matatus, bodas, and private vehicles.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Solution Section -->
+        <div class="section-header">
+            <h2><i class="fas fa-lightbulb me-2"></i>Our Innovative Solution</h2>
+        </div>
+        
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="modern-card solution-card">
+                    <div class="d-flex align-items-start">
+                        <div class="me-3">
+                            <i class="fas fa-robot" style="font-size: 3rem; opacity: 0.8;"></i>
+                        </div>
+                        <div>
+                            <h4 class="mb-3">AI-Powered Traffic Management</h4>
+                            <p class="mb-0">
+                                Developed by Group 40, our Automated Traffic Light Management System leverages a Raspberry Pi 4, Picamera2, and YOLOv5-nano to detect toy cars and dynamically adjust traffic light timings (5-20s based on vehicle density). This prototype, achieving 85% detection accuracy, is a scalable model for optimizing Kampala's intersections like Wandegeya or City Square.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <span class="stat-number">85%</span>
+                        <div class="stat-label">Detection Accuracy</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <span class="stat-number">5-20s</span>
+                        <div class="stat-label">Dynamic Timing</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <span class="stat-number">1.5M</span>
+                        <div class="stat-label">Hours Saved Annually</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <span class="stat-number">4</span>
+                        <div class="stat-label">Team Members</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Section -->
+        <div class="section-header">
+            <h2><i class="fas fa-users me-2"></i>Meet the Team</h2>
+        </div>
+        
+        <div class="row g-4 mb-5">
+            <div class="col-lg-3 col-md-6">
+                <div class="modern-card team-card">
+                    <div class="team-avatar">KA</div>
+                    <h5 class="team-name">Kato Agaba Arnold</h5>
+                    <div class="team-role">Hardware Engineer</div>
+                    <p class="team-description">
+                        Designed and wired the Raspberry Pi 4 with LEDs, ensuring safe GPIO operation for traffic light control.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="modern-card team-card">
+                    <div class="team-avatar">KT</div>
+                    <h5 class="team-name">Komukama Tracy</h5>
+                    <div class="team-role">Software Lead</div>
+                    <p class="team-description">
+                        Led software development, integrating YOLOv5-nano with OpenCV and managing the GitHub repository.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="modern-card team-card">
+                    <div class="team-avatar">MH</div>
+                    <h5 class="team-name">Madete Hector</h5>
+                    <div class="team-role">AI Specialist</div>
+                    <p class="team-description">
+                        Optimized detection accuracy to 85% and tested dynamic light control logic.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="modern-card team-card">
+                    <div class="team-avatar">NM</div>
+                    <h5 class="team-name">Nabaggala Marion</h5>
+                    <div class="team-role">Project Coordinator</div>
+                    <p class="team-description">
+                        Coordinated the project and authored comprehensive documentation, including this website.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- References Section -->
+        <div class="references-section">
+            <h3><i class="fas fa-book me-2"></i>References</h3>
+            <div class="reference-item">
+                <strong>[1]</strong> OpenCV Team. (2025). OpenCV: Open Source Computer Vision Library. 
+                <a href="https://opencv.org/" target="_blank" class="text-decoration-none">https://opencv.org/</a>
+            </div>
+            <div class="reference-item">
+                <strong>[2]</strong> Ultralytics. (2025). YOLOv5: Real-Time Object Detection. 
+                <a href="https://github.com/ultralytics/yolov5" target="_blank" class="text-decoration-none">https://github.com/ultralytics/yolov5</a>
+            </div>
+            <div class="reference-item">
+                <strong>[3]</strong> KCCA. (2024). Kampala Traffic Flow Analysis Report. (Hypothetical source for context)
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="map-container">
+            <h3 class="mb-4"><i class="fas fa-map-marked-alt me-2"></i>Target Intersections in Kampala</h3>
+            <div class="map-placeholder">
+                <i class="fas fa-map" style="font-size: 3rem; margin-bottom: 1rem; display: block;"></i>
+                <h5>Kampala Traffic Intersections</h5>
+                <p class="mb-0">Interactive map showing congested intersections like City Square, Wandegeya, and Kampala Road where our system can be deployed.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4">
         <p>&copy; 2025 Group 40 – Kato Agaba Arnold, Komukama Tracy, Madete Hector, Nabaggala Marion. A class project for smarter cities.</p>
     </footer>
