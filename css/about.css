@@ -83,6 +83,33 @@
             margin-bottom: 1rem;
             position: relative;
         }
+        .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(26, 29, 41, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    transition: var(--transition-medium);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+}
+
+.nav-brand a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    gap: 12px;
+}
 
         .section-header h2::after {
             content: '';
