@@ -102,9 +102,11 @@
             font-weight: 600;
             display: inline-block;
         }
-        .img {
-  max-width: 100%; /* Ensures the image doesn't exceed its container's width */
-  height: auto;    /* Maintains the aspect ratio by automatically adjusting height */
+        .gallery-card img {
+    width: 100%; /* Make image fill the width of its container */
+    height: 100%; /* Make image fill the height of its container */
+    object-fit: cover; /* Crops the image to fit, maintaining aspect ratio */
+    /* Other options: 'contain' (fits entirely, may leave space), 'fill' (stretches), 'none', 'scale-down' */
 }
         .section-header {
             background: white;
