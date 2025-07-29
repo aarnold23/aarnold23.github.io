@@ -3,9 +3,7 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: black;
 }
-.container{
-    background-color: white;
-}
+
 
 .hero {
     background-color: rgba(0, 0, 0, 0.5); /* Overlay for readability */
