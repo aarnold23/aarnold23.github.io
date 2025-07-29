@@ -103,7 +103,7 @@
             display: inline-block;
         }
         .gallery-card img {
-    width: 250px /* Make image fill the width of its container */
+    width: 250px; /* Make image fill the width of its container */
     height: 240px; /* Make image fill the height of its container */
      /* Crops the image to fit, maintaining aspect ratio */
     /* Other options: 'contain' (fits entirely, may leave space), 'fill' (stretches), 'none', 'scale-down' */
