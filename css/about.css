@@ -49,12 +49,8 @@
         }
 
         .hero-section {
-            background: linear-gradient(90deg, var(--success-color), var(--warning-color));
-/*             background: 
-                        radial-gradient(circle at 20% 80%, rgba(75, 175, 80, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-                         radial-gradient(circle at 40% 40%, rgba(255, 179, 71, 0.05) 0%, transparent 50%); */
-            color: white;
+            background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+           color: white;
             padding: 90px;
             
             border-radius: 0 0 50px 50px;
