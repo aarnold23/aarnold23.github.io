@@ -49,7 +49,7 @@
         }
 
         .hero-section {
-            background: var(--gradient-hero);
+            background: linear-gradient(135deg, #1A1D29 0%, #252836 100%);
 /*             background: 
                         radial-gradient(circle at 20% 80%, rgba(75, 175, 80, 0.1) 0%, transparent 50%),
                         radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
